@@ -3,15 +3,7 @@ $.getJSON( "https://api.airtable.com/v0/appDfyDoNNK1cLLhG/Restaurants?api_key=ke
  var items = [];
   $.each( data.records, function( index, val ) {
     //console.log(val.fields["Name"])
-    items.push( "<li id='" + val.id + "'>" + 
-    	val.fields["Name"] + " -" + 
-    	val.fields["Location"] + " -" + 
-    	val.fields["Type"] + " -" + 
-    	val.fields["Cuisine"] + " -" + 
-    	val.fields["Good options for"] + " -" + 
-    	val.fields["Rating"] + " -" + 
-    	val.fields["Cost"] + " -" + 
-    	val.fields["Delivery"] + "'</li>" );
+    items.push( "<li id='" + val.id + "'>" + val.fields["Name"] + " -" + val.fields["Location"] + " -" + val.fields["Type"] + " -" + val.fields["Cuisine"] + " -" + val.fields["Good options for"] + " -" + val.fields["Rating"] + " -" + val.fields["Cost"] + " -" + val.fields["Delivery"] + "'</li>" );
   });
  
   $( "<ol/>", {
