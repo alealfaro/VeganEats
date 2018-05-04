@@ -4,5 +4,40 @@ h1 {
 }
 body {
 	background-color: white;
-	font-family: 
+	
+
+	
+}
+body{
+	background-image: url(img/food.jpg);
+	
+}
+  #header{
+	height:150px;
+	line-height: 150px;
+}
+#header a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+#header a:hover{
+	color:#222;
+}
+#header-tittle{
+	display: block;
+	float: left;
+	font size: 20px;
+	font-weight: bold;
+}
+#header-nav{
+	display: block;
+	float: right;
+	margin-top: 0;
+}
+#header-nav li {
+	display: inline;
+	padding-left: 20px;
+
 }
