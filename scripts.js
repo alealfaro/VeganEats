@@ -4,11 +4,11 @@ var Restaurants = function(id, Name, Photos, Location, Type, Cuisine, goodOption
     <div class="card mb-4 box-shadow">
       <div class="card-body">
         <h2>${Name}</h2>
-        <a href="taqueria.html?id=${id}"><img class="card-img-top" src="${Photos}"></a>
+        <a href="location.html?id=${id}"><img class="card-img-top" src="${Photos}"></a>
         <p class="card-text">${Type}</p>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
-            <a href="Restaurants.html?id=${id}" class="btn btn-sm btn-outline-secondary">View details</a>
+            <a href="location.html?id=${id}" class="btn btn-sm btn-outline-secondary">View details</a>
             <button type="button" class="btn btn-sm btn-outline-secondary">Add to favorites</button>
           </div>
           <small class="text-muted">${Rating}</small>
