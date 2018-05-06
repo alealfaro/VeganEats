@@ -1,9 +1,10 @@
-var Restaurants = function(id, Name, Location, Type, Cuisine, goodOptionsFor, Rating, Cost, Delivery) {
+var Restaurants = function(id, Name, Photos, Location, Type, Cuisine, goodOptionsFor, Rating, Cost, Delivery) {
   return `
   <div class="col-sm-6">
     <div class="card mb-4 box-shadow">
       <div class="card-body">
         <h2>${Name}</h2>
+        <a href="taqueria.html?id=${id}"><img class="card-img-top" src="${Photos}"></a>
         <p class="card-text">${Type}</p>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
@@ -26,13 +27,15 @@ $.getJSON( "https://api.airtable.com/v0/appDfyDoNNK1cLLhG/Restaurants?api_key=ke
 
     var id = val.id;
     var Name = val.fields["Name"];
-    var Type = val.fields["Location"];
+    var Photos = val.fields["Photos"] ? val.fields["Photos"][0].url : '';  
+    var Type = val.fields["Type"];
+    var Location = val.fields["Location"]
     var Cuisine = val.fields["Cuisine"];
     var goodOptionsFor = val.fields["Good options for"];
     var Rating = val.fields["Rating"];
     var Cost = val.fields["Cost"];
     var Delivery = val.fields["Delivery"]
-    var itemHTML = Restaurants(id, Name, Location, Cuisine, goodOptionsFor, Rating, Cost, Delivery);
+    var itemHTML = Restaurants(id, Name, Photos, Type, Location, Cuisine, goodOptionsFor, Rating, Cost, Delivery);
     items.push(itemHTML);
   });
  items.push(`</div>`);
